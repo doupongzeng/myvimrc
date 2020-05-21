@@ -1,0 +1,45 @@
+{
+    "coc.preferences.currentFunctionSymbolAutoUpdate": true,
+    "coc.preferences.extensionUpdateCheck": "daily",
+    "coc.preferences.formatOnSaveFiletypes": ["go"],
+    "coc.source.omni.enable": true,
+    "coc.source.omni.filetypes": ["cmake"],
+    "diagnostic.virtualText": true,
+    "diagnostic.warningSign": "\uf071",
+    "suggest.autoTrigger": "always",
+    "signature.target": "echo",
+    "suggest.labelMaxLength": 80,
+
+	"list.insertMappings": {
+		"<C-j>": "normal:j",
+		"<C-k>": "normal:k"
+	},
+    "list.normalMappings": {
+		"<C-j>": "normal:j",
+		"<C-k>": "normal:k"
+    },
+
+    "languageserver": {
+        "ccls": {
+            "enable": true,
+            "command": "ccls",
+            "filetypes": ["c", "cpp", "objc", "objcpp"],
+            "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+            "initializationOptions": {
+                "cache": {
+                    "directory": "/tmp/ccls"
+                },
+                "client": {
+                    "snippetSupport": true
+                },
+                "highlight": { "lsRanges" : true }
+            }
+        }
+    },
+
+    "clangd.enabled": false,
+    "clangd.semanticHighlighting": true,
+    "go.goplsOptions": {
+        "completeUnimported": true
+    }
+}
