@@ -33,7 +33,7 @@ Plug 'richq/vim-cmake-completion'
 Plug 'yuexiahu/a.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'ryanoasis/vim-devicons' " file icons, need NerdFont
+"Plug 'ryanoasis/vim-devicons' " file icons, need NerdFont
 
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'Yggdroot/LeaderF-marks'
