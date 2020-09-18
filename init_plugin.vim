@@ -22,7 +22,7 @@ Plug 'jackguo380/vim-lsp-cxx-highlight' " C++ lsp highlight
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'sheerun/vim-polyglot' " language syntax improvment
-Plug 'lervag/vimtex'
+"Plug 'lervag/vimtex'
 
 Plug 'joshdick/onedark.vim'
 Plug 'crusoexia/vim-monokai'
@@ -268,7 +268,7 @@ if HasPlug('nerdtree')
     let g:NERDTreeHighlightFoldersFullName = 1
     let g:NERDTreePatternMatchHighlightFullName = 1
     let g:NERDTreeWinPos = "left"
-    let g:NERDTreeIndicatorMapCustom = {
+    let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ "Modified"  : "M",
                 \ "Staged"    : "✚",
                 \ "Untracked" : "U",
