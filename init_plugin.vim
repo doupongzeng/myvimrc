@@ -33,7 +33,7 @@ Plug 'richq/vim-cmake-completion'
 Plug 'yuexiahu/a.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-"Plug 'ryanoasis/vim-devicons' " file icons, need NerdFont
+Plug 'ryanoasis/vim-devicons' " file icons, need NerdFont
 
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'Yggdroot/LeaderF-marks'
@@ -51,12 +51,15 @@ Plug 'kana/vim-textobj-entire' " e
 Plug 'kana/vim-textobj-indent' " i
 Plug 'kana/vim-textobj-function' " f F
 
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
 " Initialize plugin system
 call plug#end()
 
 function! HasPlug(name)
     return has_key(g:plugs, a:name) && isdirectory($HOME . "/.vim/plugged/" . a:name)
 endfunction
+
 
 "=======================================
 " Plug 'neoclide/coc.nvim'
