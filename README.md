@@ -5,10 +5,10 @@
 1. Linux
 
     ```bash
-    git clone https://github.com/yuexiahu/myvimrc.git ~/.vim
+    https://github.com/doupongzeng/myvimrc.git
 
     # neovim
-    ln -s ~/.vim ~/.config/nvim
+    ln -s ~/.vim/* ~/.config/nvim
 
     # vim
     cp ~/.vim/vimrc ~/.vimrc
