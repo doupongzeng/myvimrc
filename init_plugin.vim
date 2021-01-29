@@ -53,6 +53,7 @@ Plug 'kana/vim-textobj-function' " f F
 
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
+Plug 'jiangmiao/auto-pairs'
 " Initialize plugin system
 call plug#end()
 
