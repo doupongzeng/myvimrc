@@ -38,7 +38,7 @@ Plug 'ryanoasis/vim-devicons' " file icons, need NerdFont
 Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 Plug 'Yggdroot/LeaderF-marks'
 Plug 'skywind3000/vim-terminal-help'
-Plug 'rlue/vim-barbaric'
+"Plug 'rlue/vim-barbaric'
 
 Plug 'honza/vim-snippets'
 Plug 'vim-scripts/DoxygenToolkit.vim'
@@ -51,9 +51,13 @@ Plug 'kana/vim-textobj-entire' " e
 Plug 'kana/vim-textobj-indent' " i
 Plug 'kana/vim-textobj-function' " f F
 
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
+"Plug 'vim-ruby/vim-ruby'
+"Plug 'tpope/vim-rails'
 Plug 'jiangmiao/auto-pairs'
+"Plug 'Olical/conjure', {'tag': 'v4.17.0'}
+Plug 'radenling/vim-dispatch-neovim'
+Plug 'clojure-vim/vim-jack-in'
+Plug 'tpope/vim-dispatch'
 " Initialize plugin system
 call plug#end()
 
@@ -74,7 +78,6 @@ if HasPlug('coc.nvim')
                 \'coc-pairs',
                 \'coc-snippets',
                 \'coc-clangd',
-                \'coc-python',
                 \'coc-go',
                 \'coc-rls',
                 \]

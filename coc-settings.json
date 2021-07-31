@@ -41,5 +41,6 @@
     "clangd.semanticHighlighting": true,
     "go.goplsOptions": {
         "completeUnimported": true
-    }
+    },
+    "python.jediEnabled": false
 }
