@@ -248,9 +248,9 @@ endif
 "Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 "=======================================
 if HasPlug('tokyonight.nvim')
-    colorscheme tokyonight
     let g:tokyonight_style = "night"
     let g:lightline = {'colorscheme': 'tokyonight'}
+    colorscheme tokyonight
 endif
 
 
