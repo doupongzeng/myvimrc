@@ -6,44 +6,35 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-Plug 'justinmk/vim-sneak'
-Plug 'machakann/vim-sandwich'
-Plug 'tpope/vim-rsi' " emacs like keymap
-Plug 'tpope/vim-fugitive'
+"Plug 'justinmk/vim-sneak'
+"Plug 'machakann/vim-sandwich'
+"Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'godlygeek/tabular'
 Plug 'rhysd/vim-clang-format'
 
-"Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}     " language-server client
-Plug 'jackguo380/vim-lsp-cxx-highlight' " C++ lsp highlight
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'sheerun/vim-polyglot' " language syntax improvment
-"Plug 'lervag/vimtex'
+"Plug 'jackguo380/vim-lsp-cxx-highlight' " C++ lsp highlight
+"Plug 'sheerun/vim-polyglot' " language syntax improvment
 
-Plug 'joshdick/onedark.vim'
-Plug 'crusoexia/vim-monokai'
+"Plug 'joshdick/onedark.vim'
+"Plug 'crusoexia/vim-monokai'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
-Plug 'vhdirk/vim-cmake'
-Plug 'richq/vim-cmake-completion'
+"Plug 'vhdirk/vim-cmake'
+"Plug 'richq/vim-cmake-completion'
 
 Plug 'yuexiahu/a.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons' " file icons, need NerdFont
 
-Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
-Plug 'Yggdroot/LeaderF-marks'
-Plug 'skywind3000/vim-terminal-help'
-"Plug 'rlue/vim-barbaric'
+Plug 'rlue/vim-barbaric'
 
-Plug 'honza/vim-snippets'
-Plug 'vim-scripts/DoxygenToolkit.vim'
-"Plug 'skywind3000/vim-dict'
-Plug 'voldikss/vim-translator'
+"Plug 'honza/vim-snippets'
+"Plug 'voldikss/vim-translator'
 
 Plug 'kana/vim-textobj-user' " text object customize
 Plug 'kana/vim-textobj-line' " l
@@ -51,19 +42,20 @@ Plug 'kana/vim-textobj-entire' " e
 Plug 'kana/vim-textobj-indent' " i
 Plug 'kana/vim-textobj-function' " f F
 
-"Plug 'vim-ruby/vim-ruby'
-"Plug 'tpope/vim-rails'
 Plug 'jiangmiao/auto-pairs'
-"Plug 'Olical/conjure', {'tag': 'v4.17.0'}
-Plug 'radenling/vim-dispatch-neovim'
-Plug 'clojure-vim/vim-jack-in'
-Plug 'tpope/vim-dispatch'
+"Plug 'radenling/vim-dispatch-neovim'
+"Plug 'tpope/vim-dispatch'
 " Initialize plugin system
 call plug#end()
 
 function! HasPlug(name)
     return has_key(g:plugs, a:name) && isdirectory($HOME . "/.vim/plugged/" . a:name)
 endfunction
+
+"==========================.nvim=============
+"Plug 'rlue/vim-barbaric'
+"=======================================
+let g:barbaric_ime = 'ibus'
 
 
 "=======================================
@@ -227,28 +219,41 @@ endif
 " Plug 'joshdick/onedark.vim'
 " Plug 'crusoexia/vim-monokai'
 "=======================================
-if has("termguicolors")
-    " fix bug for vim
-    set t_8f=[38;2;%lu;%lu;%lum
-    set t_8b=[48;2;%lu;%lu;%lum
-
-    " enable true color
-    set termguicolors
+"if has("termguicolors")
+"    " fix bug for vim
+"    set t_8f=[38;2;%lu;%lu;%lum
+"    set t_8b=[48;2;%lu;%lu;%lum
+"
+"    " enable true color
+"    set termguicolors
+"endif
+"
+"let g:monokai_term_italic = 1
+"let g:monokai_gui_italic = 1
+"let g:onedark_hide_endofbuffer = 1
+"let g:onedark_terminal_italics = 1
+"set background=dark
+"
+"if HasPlug('onedark.vim')
+"    "color onedark
+"endif
+"
+"if HasPlug('vim-monokai')
+"    color monokai
+"endif
+"
+"=======================================
+" color scheme
+"Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+"=======================================
+if HasPlug('tokyonight.nvim')
+    colorscheme tokyonight
+    let g:tokyonight_style = "night"
 endif
 
-let g:monokai_term_italic = 1
-let g:monokai_gui_italic = 1
-let g:onedark_hide_endofbuffer = 1
-let g:onedark_terminal_italics = 1
-set background=dark
 
-if HasPlug('onedark.vim')
-    "color onedark
-endif
 
-if HasPlug('vim-monokai')
-    color monokai
-endif
+
 
 "=======================================
 " Plug 'vhdirk/vim-cmake'

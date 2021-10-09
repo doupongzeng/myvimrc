@@ -2,7 +2,7 @@
 exec 'set rtp+=~/.vim'
 
 " basic config
-source ~/.vim/init_basic.vim
+source ~/.config/nvim/init_basic.vim
 
 " plugin config
-source ~/.vim/init_plugin.vim
+source ~/.config/nvim/init_plugin.vim
